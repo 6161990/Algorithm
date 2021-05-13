@@ -1,7 +1,5 @@
-#!/usr/bin/env python
-# coding: utf-8
 
-# ## 대표적인 데이터 구조4: 큐 (Queue)
+### 대표적인 데이터 구조4: 큐 (Queue)
 # 
 # ### 1. 큐 구조
 # * 줄을 서는 행위와 유사
@@ -31,7 +29,8 @@
 # #### 3.1. Queue()로 큐 만들기 (가장 일반적인 큐, FIFO(First-In, First-Out))
 
 # In[1]:
-```
+
+```python
 
 import queue
 
@@ -131,49 +130,5 @@ data_queue.get()
 
 
 data_queue.get()
+
 ```
-
-# ### 참고: 어디에 큐가 많이 쓰일까?
-# - 멀티 태스킹을 위한 프로세스 스케쥴링 방식을 구현하기 위해 많이 사용됨 (운영체제 참조)
-# 
-# > 큐의 경우에는 장단점 보다는 (특별히 언급되는 장단점이 없음), 큐의 활용 예로 프로세스 스케쥴링 방식을 함께 이해해두는 것이 좋음
-
-# ### 4. 프로그래밍 연습 
-
-# <div class="alert alert-block alert-warning">
-# <strong><font color="blue" size="3em">연습1: 리스트 변수로 큐를 다루는 enqueue, dequeue 기능 구현해보기</font></strong>
-# </div>
-
-# In[22]:
-
-
-queue_list=list()
-def enqueue(data):
-    queue_list.append(data)
-
-def dequeue():
-    data=queue_list[0]
-    del queue_list[0]
-    return data
-
-
-# In[23]:
-
-
-for index in range(10):
-    enqueue(index)
-
-
-# In[24]:
-
-
-len(queue_list)
-
-
-# In[25]:
-
-
-dequeue()
-
-
-# ### 쉬어가기: https://youtu.be/u6RoU-SDpYE
