@@ -31,7 +31,7 @@
 # #### 3.1. Queue()로 큐 만들기 (가장 일반적인 큐, FIFO(First-In, First-Out))
 
 # In[1]:
-```python
+```
 
 import queue
 
