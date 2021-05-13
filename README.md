@@ -1,9 +1,9 @@
 ## Data Structure , Algorithm
 Algorithm with Python
 
-### Data Structure
+### 자료구조 Data Structure 
 * [Array](https://github.com/6161990/Algorithm/blob/main/Data%20Structure%20-%20Array.md)
 
 <br>
 
-### Algorithm
+### 알고리즘 Algorithm
