@@ -1,4 +1,4 @@
-### 대표적인 데이터 구조6: 해쉬 테이블 (Hash Table)
+### 해쉬 테이블 (Hash Table)
 
 #### 1. 해쉬 구조
 * Hash Table: 키(Key)에 데이터(Value)를 저장하는 데이터 구조
