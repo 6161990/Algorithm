@@ -31,7 +31,7 @@
 # #### 3.1. Queue()로 큐 만들기 (가장 일반적인 큐, FIFO(First-In, First-Out))
 
 # In[1]:
-
+```python
 
 import queue
 
@@ -131,7 +131,7 @@ data_queue.get()
 
 
 data_queue.get()
-
+```
 
 # ### 참고: 어디에 큐가 많이 쓰일까?
 # - 멀티 태스킹을 위한 프로세스 스케쥴링 방식을 구현하기 위해 많이 사용됨 (운영체제 참조)
