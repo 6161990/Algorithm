@@ -7,4 +7,4 @@ Algorithm with Python
 <br>
 
 ### 알고리즘 Algorithm
-* [Bubble Sort](https://github.com/6161990/Algorithm/blob/main/Algorithm%20-%20Bubble%20Sort.md)
+* [Bubble Sort](https://github.com/6161990/Algorithm/blob/main/Algorithm/Bubble%20Sort.md)
