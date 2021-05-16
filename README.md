@@ -9,6 +9,7 @@ Algorithm with Python
 * [Stack](https://github.com/6161990/Algorithm/blob/main/Data%20Structure/Stack.md)
 * [Tree](https://github.com/6161990/Algorithm/blob/main/Data%20Structure/Tree.md)
 * [시간복잡도](https://github.com/6161990/Algorithm/blob/main/Data%20Structure/%EC%8B%9C%EA%B0%84%20%EB%B3%B5%EC%9E%A1%EB%8F%84.md)
+* [시간복잡도](https://github.com/6161990/Algorithm/blob/main/Data%20Structure/Heap.md)
 
 <br>
 
