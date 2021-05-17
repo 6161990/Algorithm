@@ -1,6 +1,6 @@
-## 대표적인 정렬1: 버블 정렬 (bubble sort) 
+### 버블 정렬 (bubble sort) 
 
-### 0. 알고리즘 연습 방법
+#### 0. 알고리즘 연습 방법
 * 알고리즘을 잘 작성하기 위해서는 잘 작성된 알고리즘을 이해하고, 스스로 만들어봐야 함
   - 모사! 그림을 잘 그리기 위해서는 잘 그린 그림을 모방하는 것부터 시작
 
@@ -18,7 +18,7 @@
 <font size=3em>7. 데이터 구조 또는 사용할 변수가 코드에 따라 어떻게 변하는지를 손으로 적으면서, 임의 데이터로 코드가 정상 동작하는지를 연습장과 펜으로 검증한다.</font><br>
 </div>
 
-### 1. 정렬 (sorting) 이란?
+#### 1. 정렬 (sorting) 이란?
 - 정렬 (sorting): 어떤 데이터들이 주어졌을 때 이를 정해진 순서대로 나열하는 것
 - 정렬은 프로그램 작성시 빈번하게 필요로 함
 - 다양한 알고리즘이 고안되었으며, 알고리즘 학습의 필수
@@ -26,16 +26,16 @@
 > 다양한 정렬 알고리즘 이해를 통해, 동일한 문제에 대해 다양한 알고리즘이 고안될 수 있음을 이해하고,
 > 각 알고리즘간 성능 비교를 통해, 알고리즘 성능 분석에 대해서도 이해할 수 있음
 
-### 2. 버블 정렬 (bubble sort) 란?
+#### 2. 버블 정렬 (bubble sort) 란?
 * 두 인접한 데이터를 비교해서, 앞에 있는 데이터가 뒤에 있는 데이터보다 크면, 자리를 바꾸는 정렬 알고리즘
 
-#### 직접 눈으로 보면 더 이해가 쉽다: https://visualgo.net/en/sorting
+##### 직접 눈으로 보면 더 이해가 쉽다: https://visualgo.net/en/sorting
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif" width=600/>
 
 > 출처: https://en.wikipedia.org/wiki/Bubble_sort
 
-### 3. 어떻게 코드로 만들까?
+#### 3. 어떻게 코드로 만들까?
 
 > 알고리즘 연습 방법에 기반해서 단계별로 생각해봅니다.
 
@@ -69,7 +69,7 @@
       - 2 과 3 비교, 자리바꿈없음 [1, 2, 3, 9]
       - 3 과 9 비교, 자리바꿈없음 [1, 2, 3, 9]
 
-### 4. 알고리즘 구현
+#### 4. 알고리즘 구현
 * **특이점 찾아보기**
   - n개의 리스트가 있는 경우 최대 n-1번의 로직을 적용한다.
   - 로직을 1번 적용할 때마다 가장 큰 숫자가 뒤에서부터 1개씩 결정된다.
@@ -107,7 +107,51 @@ data_list = random.sample(range(100), 50)
 print (bubblesort(data_list))
 ```
 
-### 5. 알고리즘 분석
+<br>
+
+#### 💻 직접 해보기.java
+```java
+public class Question1 {
+
+	public static void main(String[] args) {
+		Scanner sInput = new Scanner(System.in);
+		int[] inputInt = new int[5];
+		
+		for(int i=0; i<inputInt.length; i++) {
+			System.out.print((i+1)+"번째 정수를 입력: ");
+			inputInt[i] = sInput.nextInt();
+		}
+		
+	//Bubble Sort
+		for (int i = 0; i < inputInt.length-1; i++) {
+                   for (int j = 0; j < (inputInt.length-i)-1; j++) { // 배열 0부터 끝까지 한번 돌면 제일 큰 수는 맨 끝에 자리하게 되어 있으니 그 다음부터는 그 수 비교 하지 않아도 되므로  -1
+               	     if (inputInt[j]> inputInt[j+1]) { //비교 후 큰 수를 
+                        int bubbleSort = inputInt[j]; // 변수에 임시로 담고 (큰 수를 잠시 다른 공간에 이사시키고)
+                        inputInt[j] = inputInt[j+1]; //그 다음 수를 변수로 간 수의 배열 자리에 옮겨넣기  (그 자리에 작은 값 땡겨주고)
+                        inputInt[j+1] = bubbleSort; // 다음 원소의자리에 커서 옮겨간 수를 다시 꺼내 배열에 넣어주기 (다시 큰 수를 배열 넣어주기, 자리바꿈이 일어남)
+                     }
+                  }
+           
+              }
+		
+		System.out.print("정렬된 결과: ");
+		for(int bSortInt : inputInt) {
+			System.out.print(bSortInt+" ");
+		}
+		System.out.println();
+		System.out.print("정렬 후 첫번째 수와 마지막 수의 합: ");
+		System.out.println(inputInt[0]+inputInt[inputInt.length-1]);
+		System.out.print("정렬 후 두번째 수와 마지막 수의 곱: ");
+		System.out.println(inputInt[1]*inputInt[inputInt.length-1]);
+		
+	
+	}
+
+}
+
+```
+
+#### 5. 알고리즘 분석
 * 반복문이 두 개 O($n^2$)
   - 최악의 경우, <font size=5em>$\frac { n * (n - 1)}{ 2 }$</font>
 * 완전 정렬이 되어 있는 상태라면 최선은 O(n)
