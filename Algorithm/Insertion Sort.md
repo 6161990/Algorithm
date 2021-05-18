@@ -1,11 +1,11 @@
-## 대표적인 정렬2: 삽입 정렬 (insertion sort) 
+### 삽입 정렬 (insertion sort) 
 
-### 1. 삽입 정렬 (insertion sort) 란?
+#### 1. 삽입 정렬 (insertion sort) 란?
 * 삽입 정렬은 두 번째 인덱스부터 시작
 * 해당 인덱스(key 값) 앞에 있는 데이터(B)부터 비교해서 key 값이 더 작으면, B값을 뒤 인덱스로 복사
 * 이를 key 값이 더 큰 데이터를 만날때까지 반복, 그리고 큰 데이터를 만난 위치 바로 뒤에 key 값을 이동
 
-#### 직접 눈으로 보면 더 이해가 쉽다: https://visualgo.net/en/sorting
+##### 직접 눈으로 보면 더 이해가 쉽다: https://visualgo.net/en/sorting
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Insertion-sort-example.gif" />
 
@@ -28,25 +28,11 @@ for index in range(10, 1, -1):
     2
     
 
-### 2. 어떻게 코드로 만들까? (결국 프로그래밍으로 일반화할 수 있도록 만드는 것)
-
-> 알고리즘 연습 방법에 기반해서 단계별로 생각해봅니다.
+#### 2. 어떻게 코드로 만들까? (결국 프로그래밍으로 일반화할 수 있도록 만드는 것)
 
 <div class="alert alert-block alert-warning">
 <strong><font color="blue" size="4em">프로그래밍 연습</font></strong><br>
-데이터가 두개 일때 동작하는 삽입 정렬 알고리즘을 함수로 만들어보세요<br>
-프로그래밍 근육을 키우는 방법
-</div>
-
-<div class="alert alert-block alert-warning">
-<strong><font color="blue" size="4em">프로그래밍 연습</font></strong><br>
-데이터가 세개 일때 동작하는 선택 정렬 알고리즘을 함수로 만들어보세요<br>
-프로그래밍 근육을 키우는 방법
-</div>
-
-<div class="alert alert-block alert-warning">
-<strong><font color="blue" size="4em">프로그래밍 연습</font></strong><br>
-데이터가 네개 일때 동작하는 선택 정렬 알고리즘을 함수로 만들어보세요<br>
+데이터가 네개 일때 동작하는 선택 정렬 알고리즘을 함수 만들기<br>
 프로그래밍 근육을 키우는 방법
 </div>
 
@@ -92,9 +78,4 @@ print (insertion_sort(data_list))
   - 최악의 경우, <font size=5em>$\frac { n * (n - 1)}{ 2 }$</font>
 * 완전 정렬이 되어 있는 상태라면 최선은 O(n)
 
-<div class="alert alert-block alert-info">
-<strong><font color="blue" size="4em">프로그래밍 연습</font></strong><br>
-지금 설명한 삽입 정렬을 지금 다시 스스로 작성해보세요<br>
-</div>
-
-* 이해가 안가면, 이 코드를 보면서 이해하기: https://goo.gl/XKBXuk
+*  이해하기: https://goo.gl/XKBXuk
