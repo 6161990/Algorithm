@@ -1,18 +1,18 @@
-## 대표적인 정렬3: 선택 정렬 (selection sort) 
+### 선택 정렬 (selection sort) 
 
-### 1. 선택 정렬 (selection sort) 란?
+#### 1. 선택 정렬 (selection sort) 란?
 * 다음과 같은 순서를 반복하며 정렬하는 알고리즘
   1. 주어진 데이터 중, 최소값을 찾음
   2. 해당 최소값을 데이터 맨 앞에 위치한 값과 교체함
   3. 맨 앞의 위치를 뺀 나머지 데이터를 동일한 방법으로 반복함
 
-#### 직접 눈으로 보면 더 이해가 쉽다: https://visualgo.net/en/sorting
+##### 직접 눈으로 보면 더 이해가 쉽다: https://visualgo.net/en/sorting
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/9/94/Selection-Sort-Animation.gif" width=100>
 
 출처: https://en.wikipedia.org/wiki/Selection_sort
 
-### 2. 어떻게 코드로 만들까?
+#### 2. 어떻게 코드로 만들까?
 
 * 데이터가 두 개 일때
   - 예: dataList = [9, 1]
@@ -29,7 +29,7 @@
 
 <div class="alert alert-block alert-warning">
 <strong><font color="blue" size="4em">프로그래밍 연습</font></strong><br>
-데이터가 두개 일때 동작하는 선택 정렬 알고리즘을 함수로 만들어보세요<br>
+데이터가 두개 일때, <br>
 프로그래밍 근육을 키우는 방법
 </div>
 <pre>
@@ -40,7 +40,7 @@
 
 <div class="alert alert-block alert-warning">
 <strong><font color="blue" size="4em">프로그래밍 연습</font></strong><br>
-데이터가 두개 일때 동작하는 선택 정렬 알고리즘을 함수로 만들어보세요<br>
+데이터가 세개 일때,<br>
 프로그래밍 근육을 키우는 방법
 </div>
 
@@ -52,7 +52,7 @@
 
 <div class="alert alert-block alert-warning">
 <strong><font color="blue" size="4em">프로그래밍 연습</font></strong><br>
-데이터가 두개 일때 동작하는 선택 정렬 알고리즘을 함수로 만들어보세요<br>
+데이터가 네개 일때,<br>
 프로그래밍 근육을 키우는 방법
 </div>
 
@@ -63,7 +63,7 @@
     - 세 번째 실행하면, 변화 없음
 </pre>
 
-### 3. 알고리즘 구현
+#### 3. 알고리즘 구현
 1. for stand in range(len(data_list) - 1) 로 반복
 2. lowest = stand 로 놓고,
 3. for num in range(stand, len(data_list)) stand 이후부터 반복
@@ -102,11 +102,6 @@ selection_sort(data_list)
 
 
 
-### 4. 알고리즘 분석
+#### 4. 알고리즘 분석
 * 반복문이 두 개 O($n^2$)
   - 실제로 상세하게 계산하면, <font size=5em>$\frac { n * (n - 1)}{ 2 }$</font>
-
-<div class="alert alert-block alert-info">
-<strong><font color="blue" size="4em">프로그래밍 연습</font></strong><br>
-지금 설명한 선택 정렬을 지금 다시 스스로 작성해보세요<br>
-</div>
