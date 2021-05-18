@@ -4,7 +4,6 @@
 * 알고리즘을 잘 작성하기 위해서는 잘 작성된 알고리즘을 이해하고, 스스로 만들어봐야 함
   - 모사! 그림을 잘 그리기 위해서는 잘 그린 그림을 모방하는 것부터 시작
 
-> 이번 챕터부터 알고리즘 시작입니다.!
 
 <div class="alert alert-block alert-info">
 <center><strong><font size=4em>알고리즘 연습 방법</font></strong></center>
@@ -74,6 +73,7 @@
   - n개의 리스트가 있는 경우 최대 n-1번의 로직을 적용한다.
   - 로직을 1번 적용할 때마다 가장 큰 숫자가 뒤에서부터 1개씩 결정된다.
   - 로직이 경우에 따라 일찍 끝날 수도 있다. 따라서 로직을 적용할 때 한 번도 데이터가 교환된 적이 없다면 이미 정렬된 상태이므로 더 이상 로직을 반복 적용할 필요가 없다.
+
 <img src="https://www.fun-coding.org/00_Images/bubblealgo.png" />
 
 1. for num in range(len(data_list)) 반복
@@ -155,8 +155,3 @@ public class Question1 {
 * 반복문이 두 개 O($n^2$)
   - 최악의 경우, <font size=5em>$\frac { n * (n - 1)}{ 2 }$</font>
 * 완전 정렬이 되어 있는 상태라면 최선은 O(n)
-
-<div class="alert alert-block alert-info">
-<strong><font color="blue" size="4em">프로그래밍 연습</font></strong><br>
-지금 설명한 버블 정렬을 알고리즘 연습 방법에 따라서, 다시 스스로 작성해보세요<br>
-</div>
