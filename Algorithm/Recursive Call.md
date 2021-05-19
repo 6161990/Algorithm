@@ -1,18 +1,13 @@
-## 재귀 용법 (recursive call, 재귀 호출)
+### 재귀 용법 (recursive call, 재귀 호출)
 
-> 고급 정렬 알고리즘엥서 재귀 용법을 사용하므로, 고급 정렬 알고리즘을 익히기 전에 재귀 용법을 먼저 익히기로 합니다.
-
-### 1. 재귀 용법 (recursive call, 재귀 호출)
+#### 1. 재귀 용법 (recursive call, 재귀 호출)
 * 함수 안에서 동일한 함수를 호출하는 형태
 * 여러 알고리즘 작성시 사용되므로, 익숙해져야 함
 
-### 2. 재귀 용법 이해
-- 예제를 풀어보며, 재귀 용법을 이해해보기
+#### 예제
+- 팩토리얼을 구하는 알고리즘을 Recursive Call 을 활용해서 알고리즘 작성
 
-### 예제
-- 팩토리얼을 구하는 알고리즘을 Recursive Call 을 활용해서 알고리즘 작성하기
-
-### 예제 - 분석하기
+#### 예제 - 분석하기
 - 간단한 경우부터 생각해보기
   * 2! = 1 X 2
   * 3! = 1 X 2 X 3
@@ -34,7 +29,7 @@
        - 함수(3) 은 결국 2번에 의해 3 X 2 X 1 = 6 
        - 4 X 함수(3) = 4 X 6 = 24 맞다! 
 
-### 예제 - 코드 레벨로 적어보기
+#### 예제 - 코드 레벨로 적어보기
 
 
 ```python
@@ -63,7 +58,7 @@ for num in range(10):
     362880
     
 
-### 예제 - 시간 복잡도와 공간 복잡도
+#### 예제 - 시간 복잡도와 공간 복잡도
 * factorial(n) 은 n - 1 번의 factorial() 함수를 호출해서, 곱셈을 함 
   - 일종의 n-1번 반복문을 호출한 것과 동일
   - factorial() 함수를 호출할 때마다, 지역변수 n 이 생성됨
@@ -71,7 +66,7 @@ for num in range(10):
 * 시간 복잡도/공간 복잡도는 O(n-1) 이므로 결국, 둘 다 O(n)
 
 
-### 3. 재귀 호출의 일반적인 형태
+#### 3. 재귀 호출의 일반적인 형태
 
 
 ```python
@@ -120,7 +115,7 @@ for num in range(10):
     362880
     
 
-### 재귀 호출은 스택의 전형적인 예
+#### 재귀 호출은 스택의 전형적인 예
 * 함수는 내부적오르 스택처럼 관리된다.
 
 <img src="https://www.fun-coding.org/00_Images/recursivecall.png" />
@@ -129,7 +124,7 @@ for num in range(10):
 
 > 참고: 파이썬에서 재귀 함수는 깊이가(한번에 호출되는...) 1000회 이하가 되어야 함
 
-### 4. 재귀 용법을 활용한 프로그래밍 연습
+#### 4. 재귀 용법을 활용한 프로그래밍 연습
 
 <div class="alert alert-block alert-warning">
 <strong><font color="blue" size="4em">프로그래밍 연습</font></strong><br>
@@ -177,7 +172,7 @@ multiple(10)
 
 <div class="alert alert-block alert-warning">
 <strong><font color="blue" size="4em">프로그래밍 연습</font></strong><br>
-숫자가 들어 있는 리스트가 주어졌을 때, 리스트의 합을 리턴하는 함수를 만드세요
+숫자가 들어 있는 리스트가 주어졌을 때, 리스트의 합을 리턴하는 함수를 만들기
 </div>
 <pre>
 참고: 임의 값으로 리스트 만들기 random.sample(0 ~ 99까지 중에서, 임의로 10개를 만들어서 10개 값을 가지는 리스트 변수 만들기
@@ -201,7 +196,7 @@ data
 
 <div class="alert alert-block alert-warning">
 <strong><font color="blue" size="4em">프로그래밍 연습</font></strong><br>
-숫자가 들어 있는 리스트가 주어졌을 때, 리스트의 합을 리턴하는 함수를 만드세요 (재귀함수를 써보세요)
+숫자가 들어 있는 리스트가 주어졌을 때, 리스트의 합을 리턴하는 함수를 만들기 (재귀함수를 써보세요)
 </div>
 <pre>
 def sum_list(data):
@@ -238,7 +233,7 @@ sum_list(data)
 <div class="alert alert-block alert-warning">
 <strong><font color="blue" size="4em">프로그래밍 연습</font></strong><br>
 회문(palindrome)은 순서를 거꾸로 읽어도 제대로 읽은 것과 같은 단어와 문장을 의미함<br>
-회문을 판별할 수 있는 함수를 리스트 슬라이싱을 활용해서 만드세요
+회문을 판별할 수 있는 함수를 리스트 슬라이싱을 활용해서 만들기
 <img src="https://www.fun-coding.org/00_Images/palindrome.png" width=200/>
 </div>
 <pre>
@@ -253,7 +248,7 @@ string[:-1] --> Dav
 <div class="alert alert-block alert-warning">
 <strong><font color="blue" size="4em">프로그래밍 연습</font></strong><br>
 회문(palindrome)은 순서를 거꾸로 읽어도 제대로 읽은 것과 같은 단어와 문장을 의미함<br>
-회문을 판별할 수 있는 함수를 재귀함수를 활용해서 만들어봅니다.
+회문을 판별할 수 있는 함수를 재귀함수를 활용해서 만들기
 </div>
 
 
@@ -273,7 +268,7 @@ def palindrome(string):
 1, 정수 n에 대해<br>
 2. n이 홀수이면 3 X n + 1 을 하고,<br>
 3. n이 짝수이면 n 을 2로 나눕니다.<br>
-4. 이렇게 계속 진행해서 n 이 결국 1이 될 때까지 2와 3의 과정을 반복합니다.<br>
+4. 이렇게 계속 진행해서 n 이 결국 1이 될 때까지 2와 3의 과정을 반복<br>
 <br>
 예를 들어 n에 3을 넣으면,  
 <pre>
@@ -286,7 +281,7 @@ def palindrome(string):
 2
 1
 </pre>
-이 됩니다.
+
 
 이렇게 정수 n을 입력받아, 위 알고리즘에 의해 1이 되는 과정을 모두 출력하는 함수를 작성하세요.
 
