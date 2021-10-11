@@ -17,6 +17,7 @@ public class Q5 {
 			for(int j=i+1; j<n; j++) {
 				for(int l=j+1; l<n; l++) {
 					Tset.add(arr[i]+arr[j]+arr[l]);
+					
 				}
 			}
 		}
